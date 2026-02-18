@@ -1,0 +1,23 @@
+name: Deploy NBA Oracle to Azure Blob
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Azure CLI
+        run: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+      - name: Deploy to Blob
+        run: |
+          az storage blob upload-batch \
+            --destination '$web' \
+            --source . \
+            --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
