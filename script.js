@@ -1,13 +1,15 @@
-const teams = [
-    { name: "Boston Celtics", division: "Atlantic", logo: "https://cdn.nba.com/logos/nba/1610612738/global/L/logo.svg", probability: 92 },
-    { name: "Milwaukee Bucks", division: "Central", logo: "https://cdn.nba.com/logos/nba/1610612749/global/L/logo.svg", probability: 88 },
-    { name: "Miami Heat", division: "Southeast", logo: "https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg", probability: 75 },
-    { name: "Los Angeles Lakers", division: "Pacific", logo: "https://cdn.nba.com/logos/nba/1610612747/global/L/logo.svg", probability: 85 },
-    { name: "Denver Nuggets", division: "Northwest", logo: "https://cdn.nba.com/logos/nba/1610612743/global/L/logo.svg", probability: 90 },
-    { name: "Dallas Mavericks", division: "Southwest", logo: "https://cdn.nba.com/logos/nba/1610612742/global/L/logo.svg", probability: 82 }
-];
-
+let teams = [];
 const container = document.getElementById("teamContainer");
+
+fetch("predictions.json")
+    .then(response => response.json())
+    .then(data => {
+        teams = data.teams;
+        showDivision("Atlantic"); // default division
+    })
+    .catch(error => {
+        console.error("Error loading predictions:", error);
+    });
 
 function showDivision(division) {
     container.innerHTML = "";
@@ -28,6 +30,3 @@ function showDivision(division) {
         container.appendChild(card);
     });
 }
-
-// Load default division
-showDivision("Atlantic");

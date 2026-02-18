@@ -1,0 +1,134 @@
+{
+    "Atlantic": [
+        {
+            "team": "Boston Celtics",
+            "playoff_probability": 0.9356
+        },
+        {
+            "team": "Brooklyn Nets",
+            "playoff_probability": 0.494
+        },
+        {
+            "team": "New York Knicks",
+            "playoff_probability": 0.7937
+        },
+        {
+            "team": "Philadelphia 76ers",
+            "playoff_probability": 0.728
+        },
+        {
+            "team": "Toronto Raptors",
+            "playoff_probability": 0.3735
+        }
+    ],
+    "Central": [
+        {
+            "team": "Chicago Bulls",
+            "playoff_probability": 0.5872
+        },
+        {
+            "team": "Cleveland Cavaliers",
+            "playoff_probability": 0.8663
+        },
+        {
+            "team": "Detroit Pistons",
+            "playoff_probability": 0.3276
+        },
+        {
+            "team": "Indiana Pacers",
+            "playoff_probability": 0.5224
+        },
+        {
+            "team": "Milwaukee Bucks",
+            "playoff_probability": 0.9364
+        }
+    ],
+    "Southeast": [
+        {
+            "team": "Atlanta Hawks",
+            "playoff_probability": 0.505
+        },
+        {
+            "team": "Charlotte Hornets",
+            "playoff_probability": 0.1972
+        },
+        {
+            "team": "Miami Heat",
+            "playoff_probability": 0.789
+        },
+        {
+            "team": "Orlando Magic",
+            "playoff_probability": 0.3654
+        },
+        {
+            "team": "Washington Wizards",
+            "playoff_probability": 0.0865
+        }
+    ],
+    "Northwest": [
+        {
+            "team": "Denver Nuggets",
+            "playoff_probability": 0.9096
+        },
+        {
+            "team": "Minnesota Timberwolves",
+            "playoff_probability": 0.803
+        },
+        {
+            "team": "Oklahoma City Thunder",
+            "playoff_probability": 0.5789
+        },
+        {
+            "team": "Portland Trail Blazers",
+            "playoff_probability": 0.1494
+        },
+        {
+            "team": "Utah Jazz",
+            "playoff_probability": 0.3408
+        }
+    ],
+    "Pacific": [
+        {
+            "team": "Golden State Warriors",
+            "playoff_probability": 0.8342
+        },
+        {
+            "team": "LA Clippers",
+            "playoff_probability": 0.7958
+        },
+        {
+            "team": "Los Angeles Lakers",
+            "playoff_probability": 0.6525
+        },
+        {
+            "team": "Phoenix Suns",
+            "playoff_probability": 0.7908
+        },
+        {
+            "team": "Sacramento Kings",
+            "playoff_probability": 0.5281
+        }
+    ],
+    "Southwest": [
+        {
+            "team": "Dallas Mavericks",
+            "playoff_probability": 0.6524
+        },
+        {
+            "team": "Houston Rockets",
+            "playoff_probability": 0.3514
+        },
+        {
+            "team": "Memphis Grizzlies",
+            "playoff_probability": 0.6978
+        },
+        {
+            "team": "New Orleans Pelicans",
+            "playoff_probability": 0.4573
+        },
+        {
+            "team": "San Antonio Spurs",
+            "playoff_probability": 0.0753
+        }
+    ]
+}
