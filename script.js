@@ -1,11 +1,12 @@
-let teams = [];
 const container = document.getElementById("teamContainer");
+
+let predictions = {};
 
 fetch("predictions.json")
     .then(response => response.json())
     .then(data => {
-        teams = data.teams;
-        showDivision("Atlantic"); // default division
+        predictions = data;
+        showDivision("Atlantic"); // default
     })
     .catch(error => {
         console.error("Error loading predictions:", error);
@@ -14,16 +15,19 @@ fetch("predictions.json")
 function showDivision(division) {
     container.innerHTML = "";
 
-    const filtered = teams.filter(team => team.division === division);
+    const teams = predictions[division];
 
-    filtered.forEach(team => {
+    if (!teams) return;
+
+    teams.forEach(team => {
         const card = document.createElement("div");
         card.classList.add("team-card");
 
+        const percentage = (team.playoff_probability * 100).toFixed(1);
+
         card.innerHTML = `
-            <img src="${team.logo}" class="team-logo">
-            <h3>${team.name}</h3>
-            <div class="probability">${team.probability}%</div>
+            <h3>${team.team}</h3>
+            <div class="probability">${percentage}%</div>
             <p>Chance to Make Playoffs</p>
         `;
 
