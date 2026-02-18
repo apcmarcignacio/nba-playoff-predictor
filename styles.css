@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1, h2, h3, .navbar {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+/* NAVBAR */
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* SCORE STRIP */
+.score-strip {
+    background-color: #e5e5e5;
+    padding: 10px 40px;
+    display: flex;
+    gap: 40px;
+    font-size: 14px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* HERO */
+.hero {
+    flex: 2;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)),
+    url("https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png");
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+    position: relative;
+    color: white;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    max-width: 400px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #e10600;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* HEADLINES */
+.headlines {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.headlines ul {
+    list-style: none;
+    padding: 0;
+}
+
+.headlines li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* PLAYOFF SECTION */
+.teams {
+    padding: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.team-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.probability {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e10600;
+}
+
+.division-tabs {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.division-tabs button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #e10600;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.team-logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: 300px;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.logo img {
+    height: 32px;
+}
+
+.navbar li {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.navbar li:hover {
+    opacity: 0.7;
+}
+

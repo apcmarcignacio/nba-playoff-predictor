@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NBA Postseason Oracle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="NBA Logo">
+            <span>Oracle</span>
+        </div>
+        
+        <ul>
+            <li>Games</li>
+            <li>Schedule</li>
+            <li>Standings</li>
+            <li>Teams</li>
+            <li>Playoff Predictor</li>
+        </ul>
+    </nav>
+
+    <!-- SCORE STRIP -->
+    <div class="score-strip">
+        <div>Rockets 102 - 99 Nets</div>
+        <div>Celtics 110 - 104 Knicks</div>
+        <div>Bucks 118 - 112 Heat</div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- HERO -->
+        <div class="hero">
+            <div class="hero-text">
+                <h1>2026 Playoff Predictor</h1>
+                <p>AI predicts postseason probabilities based on advanced analytics.</p>
+                <button>VIEW PREDICTIONS</button>
+            </div>
+        </div>
+
+        <!-- HEADLINES -->
+        <div class="headlines">
+            <h3>Headlines</h3>
+            <ul>
+                <li>Power Rankings Update</li>
+                <li>Top Defensive Teams of 2026</li>
+                <li>3-Point Shooting Trends</li>
+                <li>Midseason Trade Analysis</li>
+                <li>AI Model Accuracy Report</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- PLAYOFF SECTION -->
+    <section class="teams">
+    <h2>Playoff Probability by Division</h2>
+
+    <div class="division-tabs">
+        <button onclick="showDivision('Atlantic')">Atlantic</button>
+        <button onclick="showDivision('Central')">Central</button>
+        <button onclick="showDivision('Southeast')">Southeast</button>
+        <button onclick="showDivision('Pacific')">Pacific</button>
+        <button onclick="showDivision('Northwest')">Northwest</button>
+        <button onclick="showDivision('Southwest')">Southwest</button>
+    </div>
+
+    <div class="team-grid" id="teamContainer"></div>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
