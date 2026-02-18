@@ -7,6 +7,25 @@
     <title>NBA Postseason Oracle</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<script>
+async function loadPredictions() {
+  const response = await fetch('predictions.json');
+  const data = await response.json();
+
+  data.divisions.forEach(division => {
+    division.teams.forEach(team => {
+      const element = document.querySelector(`[data-team="${team.team}"]`);
+      if (element) {
+        element.innerText = (team.playoff_probability * 100).toFixed(1) + "%";
+      }
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", loadPredictions);
+</script>
+
 <body>
 
     <!-- NAVBAR -->
