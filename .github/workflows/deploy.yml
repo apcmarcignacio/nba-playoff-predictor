@@ -1,4 +1,4 @@
-name: Deploy NBA Oracle to Azure Blob
+name: Deploy to Azure Blob Storage
 
 on:
   push:
@@ -6,18 +6,22 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Install Azure CLI
-        run: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+      - name: Azure CLI Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy to Blob
+      - name: Upload to Blob Storage
         run: |
           az storage blob upload-batch \
+            --account-name nbaplayoffpredictions \
             --destination '$web' \
             --source . \
-            --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+            --overwrite
